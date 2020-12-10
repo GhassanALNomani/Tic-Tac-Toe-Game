@@ -1,0 +1,50 @@
+/*      
+    style game Tic Tac Toe
+
+    will style two pages will begin with index.html 
+
+    then game.html
+
+*/
+
+
+/*   Start to style index.html page =============
+=================================================*/
+#index-body{
+    background-color: #706fd3;
+}
+#container{
+    width: 90%;
+    margin: auto;   
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+/* Start Header */
+#header-name .name-game{
+    color: #f7f1e3;
+    font-weight: bold;
+}
+/* End Header */
+
+/* Start button */
+.sectionButt{
+    
+}
+.sectionButt .button{
+    padding: 20px 80px;
+    width: 40%;
+    font-size: 30px;
+    color: #40407a;
+    background-color: #ccae62;
+    /*  border: ;*/
+    
+}
+
+.paddingBetweenButton{
+    margin-left: 20px;
+}
+/* Start button */
+/*   End style index.html page ===================
+=================================================*/
