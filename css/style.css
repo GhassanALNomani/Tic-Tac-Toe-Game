@@ -48,3 +48,22 @@
 /* Start button */
 /*   End style index.html page ===================
 =================================================*/
+
+/*   Start style game.html page ===================
+=================================================*/
+#container .container-game{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+}
+
+#buttClick{
+    border: 10px solid #d1ccc0;
+    background-color: #84817a;
+    border: 10px solid #ccae62;
+    
+}
+/*   End style game.html page ===================
+=================================================*/
