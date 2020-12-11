@@ -18,8 +18,12 @@ function setMessage(msg){
 
 // Start move
 function move(spot){ 
-    spot.innerText = turn;
-    switchTurn();
+    if(spot.innerText == ""){
+        spot.innerText = turn;
+        switchTurn();
+    }else{
+        alert("Select another spot, It's already selected")
+    }
 }
 
 function switchTurn(){
@@ -28,6 +32,8 @@ function switchTurn(){
     }else{
         turn = "X";
     }
+
+    setMessage("It's " + turn + " Your turn");
 }
 
 
