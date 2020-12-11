@@ -8,19 +8,26 @@
     </head>
     <body>
         <div id="container">
-            <div class="container-game">
-                <div id="buttClick">1</div>
-                <div id="buttClick">2</div>
-                <div id="buttClick">3</div>
-                <div id="buttClick">4</div>
-                <div id="buttClick">5</div>
-                <div id="buttClick">6</div>
-                <div id="buttClick">7</div>
-                <div id="buttClick">8</div>
-                <div id="buttClick">9</div>
-            </div>
-        </div>
+            <div class="boardInst">
 
+            </div>
+            <div class="container-game">
+                <!-- First row -->
+                <button id="spot" onclick="move(this)"></button>
+                <button id="spot" onclick="move(this)"></button>
+                <button id="spot" onclick="move(this)"></button>
+                <!-- Second row-->
+                <button id="spot" onclick="move(this)"></button>
+                <button id="spot" onclick="move(this)"></button>
+                <button id="spot" onclick="move(this)"></button>
+                <!-- Third row-->
+                <button id="spot" onclick="move(this)"></button><!-- 'this' refers to the object it belongs to-->
+                <button id="spot" onclick="move(this)"></button>
+                <button id="spot" onclick="move(this)"></button>
+            </div>
+            <button id="butStart">Start Game</button>
+        </div>
+        
         <!-- Start Script -->  
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="js/main.js"></script>  
