@@ -47,10 +47,9 @@ function giveMeSpot(num){
 
 //create function checkWinner
 
-function Winner(spotOne, spotTwo, spotThree, spotFour, spotFive, spotSix, move){
+function Winner(spotOne, spotTwo, spotThree, move){
     var result = false;
-    if(giveMeSpot(spotOne) == move && giveMeSpot(spotTwo) == move && giveMeSpot(spotThree) == move
-        && giveMeSpot(spotFour) == move && giveMeSpot(spotFive) == move && giveMeSpot(spotSix) == move){
+    if(giveMeSpot(spotOne) == move && giveMeSpot(spotTwo) == move && giveMeSpot(spotThree) == move){
         result = true;
     }
 
@@ -59,19 +58,14 @@ function Winner(spotOne, spotTwo, spotThree, spotFour, spotFive, spotSix, move){
 
 function checkWinner(move){
     var result = false
-    if( Winner(1,2,3,4,5,6,move)||
-        Winner(7,8,9,10,11,12,move)||
-        Winner(13,14,15,16,17,18,move)||
-        Winner(19,20,21,22,23,24,move)||
-        Winner(25,26,27,28,29,30,move)||
-        Winner(31,32,33,34,35,36,move)||
-        Winner(1,7,13,19,25,31,move)||
-        Winner(2,8,14,20,26,32,move)||
-        Winner(4,10,16,22,28,34,move)||
-        Winner(5,11,17,23,29,35,move)||
-        Winner(6,12,18,24,30,36,move)||
-        Winner(1,8,15,22,29,36,move)||
-        Winner(6,11,16,21,26,31,move)){
+    if( Winner(1,2,3,move)||
+        Winner(4,5,6,move)||
+        Winner(7,8,9,move)||
+        Winner(1,5,9,move)||
+        Winner(3,5,7,move)||
+        Winner(1,4,7,move)||
+        Winner(2,5,8,move)||
+        Winner(3,6,9,move)){
             result = true;
         }
     return result;
