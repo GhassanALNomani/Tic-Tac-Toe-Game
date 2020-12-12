@@ -86,3 +86,4 @@ $('#restart').on('click', function(){
     $('#container .container-game button').text("");
     $('.boardInst').text("");
 });
+
