@@ -3,7 +3,7 @@ $('#butGame').on('click', () =>{
     location.href = "game.html"
 })
 
-
+//-===========================================================================
 // Start function  Start Game
 
 var turn = "X";
@@ -12,14 +12,13 @@ $('#butStart').on('click', ()=>{
     setMessage(turn + " start game")
 })
 
+
 function setMessage(msg){
     $('.boardInst').text(msg);
 }
 
 
-
-
-// Start move
+//Start move
 function move(spot){ 
     if(spot.innerText == ""){
         spot.innerText = turn;
@@ -30,9 +29,11 @@ function move(spot){
 }
 
 function switchTurn(){
-    if(checkWinner()){
-        alert("win");
-    }else if(turn == "X"){
+    if(checkWinner(turn)){
+        alert("win")
+    }
+    if(turn == "X"){
+        checkWinner();
         turn = "O";
         setMessage("It's " + turn + " Your turn");
     }else{
@@ -42,62 +43,35 @@ function switchTurn(){
     
 }
 
-// create funtion to give me spot
+//create funtion to give me spot
 
 function giveMeSpot(num){
     return $('#spot' + num).text();
 }
 
 
-// create function checkWinner
-var Xsign = "X";
-var Osign = "O";
-function checkWinner(){
+//create function checkWinner
+
+function Winner(spotOne, spotTwo, spotThree, move){
     var result = false;
-    var rowOneOfOne = 1;
-    var rowOneOfTwo = 2;
-    var rowOneOfThree = 3;
-    var rowTwoOfOne = 4;
-    var rowTwoOfTwo = 5;
-    var rowTwoOfThree = 6;
-    var rowThreeOfOne = 7;
-    var rowThreeOfTwo = 8;
-    var rowThreeOfThree = 9;
-    if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowOneOfTwo)&&giveMeSpot(rowOneOfThree) == Xsign){
+    if(giveMeSpot(spotOne) == move && giveMeSpot(spotTwo) == move && giveMeSpot(spotThree) == move){
         result = true;
-    }else if(giveMeSpot(rowTwoOfOne)&&giveMeSpot(rowTwoOfOne)&&giveMeSpot(rowTwoOfThree) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowThreeOfOne)&&giveMeSpot(rowThreeOfTwo)&&giveMeSpot(rowThreeOfThree) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowTwoOfThree) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfTwo)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfTwo) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfThree)&&giveMeSpot(rowTwoOfThree)&&giveMeSpot(rowThreeOfThree) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfThree) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfThree)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfOne) == Xsign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowOneOfTwo)&&giveMeSpot(rowOneOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowTwoOfOne)&&giveMeSpot(rowTwoOfOne)&&giveMeSpot(rowTwoOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowThreeOfOne)&&giveMeSpot(rowThreeOfTwo)&&giveMeSpot(rowThreeOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowTwoOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfTwo)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfTwo) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfThree)&&giveMeSpot(rowTwoOfThree)&&giveMeSpot(rowThreeOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfOne)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfThree) == Osign){
-        result = true;
-    }else if(giveMeSpot(rowOneOfThree)&&giveMeSpot(rowTwoOfTwo)&&giveMeSpot(rowThreeOfOne) == Osign){
-        result = true;
-    }else{
-        //alert("Tie game");
     }
+
     return result;
 }
 
+function checkWinner(move){
+    var result = false
+    if( Winner(1,2,3,move)||
+        Winner(4,5,6,move)||
+        Winner(7,8,9,move)||
+        Winner(1,5,9,move)||
+        Winner(3,5,7,move)||
+        Winner(1,4,7,move)||
+        Winner(2,5,8,move)||
+        Winner(3,6,9,move)){
+            result = true;
+        }
+    return result;
+}
