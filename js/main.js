@@ -70,3 +70,19 @@ function checkWinner(move){
         }
     return result;
 }
+
+
+
+// Create event for button when i clicked return me to page menu
+
+$("#menu").on('click', function(){
+    location.href = "index.html";
+})
+
+
+//Create event for button when i clicked restart game
+//check
+$('#restart').on('click', function(){
+    $('#container .container-game button').text("");
+    $('.boardInst').text("");
+});
