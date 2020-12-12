@@ -10,12 +10,16 @@
 
 /*   Start to style index.html page =============
 =================================================*/
-#index-body{
-    background-color: #706fd3;
+body{
+
+    /* background-image: url('/img/background-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+     */
 }
 #container{
     width: 90%;
-    margin: auto;   
+    margin: auto;
 }
 .flex{
     display: flex;
@@ -29,9 +33,7 @@
 /* End Header */
 
 /* Start button */
-.sectionButt{
-    
-}
+
 .sectionButt .button{
     padding: 20px 80px;
     width: 40%;
@@ -51,25 +53,50 @@
 
 /*   Start style game.html page ===================
 =================================================*/
+.flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    
+
+}
 #container .container-game{
     
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
 
 }
 .container-game button{
     font-size: 30px;
 }
 
-.container-game {
-    justify-content: center;
-}
+
 #buttClick{
     border: 10px solid #d1ccc0;
     background-color: #84817a;
     border: 10px solid #ccae62;
     
+}
+
+#container #menu{
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+}
+
+#container .boardInst{
+    background-color: #ccae62;
+    border: 2px solid #706fd3;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 30%
+}
+
+.width-align{
+    width: 50%
 }
 /*   End style game.html page ===================
 =================================================*/
