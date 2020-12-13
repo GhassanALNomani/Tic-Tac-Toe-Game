@@ -107,9 +107,12 @@
 .container-game .styleButton{
     font-size: 84px;
     background-color: transparent;
-    border: 2px solid #84817a
+    border: 1px solid;
+    transition: 1s;
 }
-
+.styleButton:hover{
+    background-color: #84817a;
+}
 
 #buttClick{
     border: 10px solid #d1ccc0;
@@ -118,29 +121,31 @@
 }
 
 #container #menu{
-    padding: 10px 30px;
+    
     border-radius: 20px;
     margin-top: 30px;
     width: 100%;
-    margin-right: 20px
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
 }
 
 #container #restart{
-    padding: 10px 30px;
+    background-color: transparent;
+    border: none;
     border-radius: 20px;
     margin-top: 30px;
-    width: 100%
-
+    width: 100%;
+    font-size: 30px;
 }
 
 #container .boardInst{
-    background-color: #ccae62;
-    border: 2px solid #706fd3;
+    font-size: 30px;
     padding: 30px;
     margin-bottom: 30px;
     width: 30%
 }
-
 .width-align{
     width: 50%
 }

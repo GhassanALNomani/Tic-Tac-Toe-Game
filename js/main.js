@@ -81,7 +81,9 @@ $("#menu").on('click', function(){
 $('#restart').on('click', function(){
     turn = "X";
     $('#container .container-game button').text("");
-    $('.boardInst').text("");
+    if(turn = "X"){
+        $('.boardInst').text("Player One Start");
+    }
 });
 
 
