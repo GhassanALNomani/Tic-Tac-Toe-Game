@@ -92,3 +92,10 @@ $('#restart').on('click', function(){
 $('#quit').on('click', function(){
     window.close()
 })
+
+
+//create function called change color
+
+$('#color').on('change', function(){
+    $('#body-game').css('background-color', $('#color').val())
+})
