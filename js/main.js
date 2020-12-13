@@ -15,7 +15,7 @@ function setMessage(msg){
 
 var turn = "X";
 //Start move
-function move(spot){ 
+function move(spot){
     if(spot.innerText == ""){
         spot.innerText = turn;
         switchTurn();
@@ -25,7 +25,6 @@ function move(spot){
 }
 // function switch turn between player one and two
 function switchTurn(){
-    
     if(checkWinner("X")){
         alert("Win! Player One")
     }else if(checkWinner("O")){
@@ -102,7 +101,19 @@ $('#color').on('change', function(){
 })
 
 
-//Create function if game tie called
-function endGame(){
+function checkForTieGame(){
+    var $spot1 = $('spot1').text("");
+    var $spot2 = $('spot2').text("");
+    var $spot3 = $('spot3').text("");
+    var $spot4 = $('spot4').text("");
+    var $spot5 = $('spot5').text("");
+    var $spot6 = $('spot6').text("");
+    var $spot7 = $('spot7').text("");
+    var $spot8 = $('spot8').text("");
+    var $spot9 = $('spot9').text("");
     
+
+    if($spot1 && $spot2 && $spot3 && $spot4 && $spot5 && $spot6 && $spot7 && $spot8 && $spot9 !== ""){
+        alert("tie");
+    }
 }
