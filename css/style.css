@@ -97,12 +97,17 @@
 #container .container-game{
     
     display: grid;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(6, 100px);
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
 
 }
 .container-game button{
     font-size: 30px;
+}
+.container-game .styleButton{
+    font-size: 84px;
+    background-color: transparent;
+    border: 2px solid #84817a
 }
 
 
@@ -110,7 +115,6 @@
     border: 10px solid #d1ccc0;
     background-color: #84817a;
     border: 10px solid #ccae62;
-    
 }
 
 #container #menu{
