@@ -25,13 +25,14 @@ function move(spot){
 }
 // function switch turn between player one and two
 function switchTurn(){
+    
     if(checkWinner("X")){
         alert("Win! Player One")
     }else if(checkWinner("O")){
         alert("Win! Player Two")
     }else if(turn == "X"){
         turn = "O";
-        setMessage("Player Two" );
+        setMessage("Player Two");
     }else{
         turn = "X";
         setMessage("Player One");
@@ -99,3 +100,9 @@ $('#quit').on('click', function(){
 $('#color').on('change', function(){
     $('#body-game').css('background-color', $('#color').val())
 })
+
+
+//Create function if game tie called
+function endGame(){
+    
+}
