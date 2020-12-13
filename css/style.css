@@ -98,7 +98,12 @@
     align-content: center;
     margin: auto;
     
+}
 
+#container #custome-game{
+    border: 3px solid #000000;
+    margin-top: 20px;
+    padding-bottom: 50px;
 }
 #container .container-game{
     
