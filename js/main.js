@@ -31,10 +31,10 @@ function switchTurn(){
         alert("Win! Player Two")
     }else if(turn == "X"){
         turn = "O";
-        setMessage("Player Two turn" );
+        setMessage("Player Two" );
     }else{
         turn = "X";
-        setMessage("Player One turn");
+        setMessage("Player One");
     }
     
 }
