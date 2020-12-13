@@ -10,12 +10,11 @@
 
 /*   Start to style index.html page =============
 =================================================*/
-body{
-
+#body-index{
     background-image: url('https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc87f3778-c8bb-4f29-b7f0-3cf6b01b3c18_1920x1080.png');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    font-family: 'Russo One', sans-serif;
 }
 #container{
     width: 90%;
@@ -32,8 +31,9 @@ body{
 
 
 #header-name .name-game{
-    color: #f7f1e3;
+    color: #000000;
     font-weight: bold;
+    font-size: 70px;
 }
 /* End Header */
 
@@ -45,9 +45,10 @@ body{
 }
 .sectionButt{
     position: relative;
+    
 }
 .sectionButt .button{
-    padding: 20px 80px;
+    
     background-color: transparent;
     font-size: 40px;
     /*  border: ;*/
@@ -58,14 +59,19 @@ body{
 /* .paddingBetweenButton{
     margin-left: 20px;
 } */
+.sectionButt {
+    font-family: 'Fontdiner Swanky'
+}
 
 .button-position-game{
+    font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 600px;
+    top: 500px;
 }
 .button-position-quit{
+    font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 700px;
+    top: 550px;
 }
 
 
@@ -76,6 +82,10 @@ body{
 
 /*   Start style game.html page ===================
 =================================================*/
+#body-game{
+    background-color: #2C9D58;
+    font-family: 'Russo One', sans-serif;
+}
 .flex{
     display: flex;
     justify-content: center;
@@ -87,8 +97,8 @@ body{
 #container .container-game{
     
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
 
 }
 .container-game button{
@@ -129,6 +139,10 @@ body{
 
 .width-align{
     width: 50%
+}
+#menu,#restart{
+    font-family: 'Russo One', sans-serif;
+
 }
 /*   End style game.html page ===================
 =================================================*/
