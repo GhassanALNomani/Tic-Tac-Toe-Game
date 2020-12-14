@@ -14,7 +14,7 @@ function setMessage(msg){
 }
 
 var turn = "X";
-//Start move
+//Start move "when click spot + check if spot empty"
 function move(spot){
     if(spot.innerText == ""){
         spot.innerText = turn;
@@ -89,14 +89,30 @@ $('#restart').on('click', function(){
 
 //Create button  for when i clicked quit game
 
-$('#quit').on('click', function(){
-    window.close()
-})
+// $('#quit').on('click', function(){
+//     window.close('')
+// })
 
+// $("#quit").on('click', ()=>{
+//     var $quit = window.open('http://127.0.0.1:5500/index.html', '_blank', '')
+//     window.close();
+// })    
 
 //create function called change color
 
 $('#color').on('change', function(){
     $('#body-game').css('background-color', $('#color').val())
 })
+
+
+//create function for text color change
+
+$('#color-text #color-black').on('change', function(){
+    $('body').css('color', 'black');
+});
+
+$('#color-text #color-white').on('change', function(){
+    $('body').css('color', 'white');
+})
+
 
