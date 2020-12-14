@@ -19,4 +19,4 @@ Then, start game with by clicking in square spot starting with Player One.
 You have button starting game anytime during game to start new game or if game tie. if click restart game buttone will clear all spot and go back to first move with player one.
 
 
-
+### Demo:
