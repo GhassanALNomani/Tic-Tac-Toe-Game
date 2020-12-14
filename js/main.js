@@ -109,10 +109,16 @@ $('#color').on('change', function(){
 
 $('#color-text #color-black').on('change', function(){
     $('body').css('color', 'black');
+    $('#menu').css('color', 'black');
+    $('#restart').css('color', 'black');
+    $('.styleButton').css('color', 'black');
 });
 
 $('#color-text #color-white').on('change', function(){
     $('body').css('color', 'white');
+    $('#menu').css('color', 'white');
+    $('#restart').css('color', 'white');
+    $('.styleButton').css('color', 'white');
 })
 
 
