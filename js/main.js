@@ -80,7 +80,7 @@ $("#menu").on('click', function(){
 //check
 $('#restart').on('click', function(){
     turn = "X";
-    $('#container .container-game button').text("");
+    $('.container-game button').text("");
     if(turn = "X"){
         $('.boardInst').text("Player One Start");
     }
