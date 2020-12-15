@@ -15,20 +15,32 @@ function setMessage(msg){
 
 var turn = "X";
 //Start move "when click spot + check if spot empty"
-function move(spot){
-    if(spot.innerText == ""){
-        spot.innerText = turn;
+// function move(spot){
+//     if(spot.innerText == ""){
+//         spot.innerText = turn;
+//         switchTurn();
+//     }else{
+//         alert("Select another spot, It's already selected")
+//     }
+// }
+
+$('.container-game .styleButton').on('click', function(event){
+    const $spot = event.target;
+    if($spot.innerText == ""){
+        $spot.innerText = turn;
         switchTurn();
     }else{
         alert("Select another spot, It's already selected")
     }
-}
+});
+
+
 // function switch turn between player one and two
 function switchTurn(){
     if(checkWinner("X")){
         alert("Win! Player One")
     }else if(checkWinner("O")){
-        alert("Win! Player Two")
+        alert("Win! Player Two")  
     }else if(turn == "X"){
         turn = "O";
         setMessage("Player Two");
@@ -75,7 +87,6 @@ $("#menu").on('click', function(){
     location.href = "index.html";
 })
 
-
 //Create event for button when i clicked restart game
 //check
 $('#restart').on('click', function(){
@@ -89,14 +100,10 @@ $('#restart').on('click', function(){
 
 //Create button  for when i clicked quit game
 
-// $('#quit').on('click', function(){
-//     window.close('')
-// })
+$('#quit').on('click', function(){
+    location.reload()
+})
 
-// $("#quit").on('click', ()=>{
-//     var $quit = window.open('http://127.0.0.1:5500/index.html', '_blank', '')
-//     window.close();
-// })    
 
 //create function called change color
 
