@@ -70,7 +70,7 @@
 .button-position-game{
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 500px;
+    top: 400px;
 }
 .button-position-quit{
     font-family: 'Russo One', sans-serif;
@@ -172,7 +172,17 @@
 
 /* Start Animations ===============================
 ======================================================*/
+.flex-signs{
+    width: 50px;
+    height: 50px;
+    transition: width 3s, height 3s, font-size 3s, transform 3s;
+}
 
+.flex-signs:hover{
+    width: 100px;
+    height: 100px;
+    font-size: 50px
+}
 @keyframes moveXandO{
 
 }
