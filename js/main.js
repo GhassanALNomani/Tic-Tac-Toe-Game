@@ -14,15 +14,7 @@ function setMessage(msg){
 }
 
 var turn = "X";
-//Start move "when click spot + check if spot empty"
-// function move(spot){
-//     if(spot.innerText == ""){
-//         spot.innerText = turn;
-//         switchTurn();
-//     }else{
-//         alert("Select another spot, It's already selected")
-//     }
-// }
+
 
 $('.container-game .styleButton').on('click', function(event){
     const $spot = event.target;
