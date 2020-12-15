@@ -35,7 +35,8 @@
 /* End Header */
 
 /* Start button */
-.flex-section-button{
+.flex-section-button,
+.flex-signs{
     display: flex;
     justify-content: center;
     
@@ -171,3 +172,7 @@
 
 /* Start Animations ===============================
 ======================================================*/
+
+@keyframes moveXandO{
+
+}
