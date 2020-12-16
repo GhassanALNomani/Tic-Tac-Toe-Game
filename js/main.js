@@ -52,20 +52,20 @@ function giveMeSpot(num){
 
 //create function checkWinner
 
-function Winner(spotOne, spotTwo, spotThree, move){
+function Winner(spotOne, spotTwo, spotThree, turn){
     var result = false;
-    if(giveMeSpot(spotOne) == move && giveMeSpot(spotTwo) == move && giveMeSpot(spotThree) == move){
+    if(giveMeSpot(spotOne) == turn && giveMeSpot(spotTwo) == turn && giveMeSpot(spotThree) == turn){
         result = true;
     }
 
     return result;
 }
 
-function checkWinner(move){
+function checkWinner(turn){
     var result = false
-    if( Winner(1,2,3,move)|| Winner(4,5,6,move)|| Winner(7,8,9,move)||   //in row "wins"
-        Winner(1,5,9,move)|| Winner(3,5,7,move)||                        //in diagonal "wins"   
-        Winner(1,4,7,move)|| Winner(2,5,8,move)|| Winner(3,6,9,move)){   // in column "wins"
+    if( Winner(1,2,3,turn)|| Winner(4,5,6,turn)|| Winner(7,8,9,turn)||   //in row "wins"
+        Winner(1,5,9,turn)|| Winner(3,5,7,turn)||                        //in diagonal "wins"   
+        Winner(1,4,7,turn)|| Winner(2,5,8,turn)|| Winner(3,6,9,turn)){   // in column "wins"
             result = true;
         }
     return result;
