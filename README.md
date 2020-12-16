@@ -26,7 +26,7 @@ You have button starting game anytime during game to start new game or if game t
 - Players can change color of X or O
 
 ### Demo:
-URL: 
+URL: https://pages.git.generalassemb.ly/ghassansaud/project-1/
 
 ### Technical used:
 
