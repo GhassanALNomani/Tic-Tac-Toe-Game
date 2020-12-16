@@ -70,12 +70,7 @@
 .button-position-game{
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    top: 400px;
-}
-.button-position-quit{
-    font-family: 'Russo One', sans-serif;
-    position: absolute;
-    top: 450px;
+    top: 500px;
 }
 
 
@@ -174,9 +169,12 @@
     font-family: 'Russo One', sans-serif;
 
 }
+
+.counterX,
+.counterO{
+    border: 2px solid black;
+    padding: 10px
+}
 /*   End style game.html page ===================
 =================================================*/
 
-
-/* Start Animations ===============================
-======================================================*/

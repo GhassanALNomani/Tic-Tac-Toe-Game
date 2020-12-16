@@ -14,10 +14,18 @@ function setMessage(msg){
 }
 
 var turn = "X";
+var gameTie = null;
+var xWins = 0;
+var oWins = 0;
 
+// $(".counterX").on('change', ()=>{
+//     xWins++;
+//     console.log(xWins);
+// })
 
 $('.container-game .styleButton').on('click', function(event){
     const $spot = event.target;
+    
     if($spot.innerText == ""){
         $spot.innerText = turn;
         switchTurn();
@@ -29,10 +37,16 @@ $('.container-game .styleButton').on('click', function(event){
 
 // function switch turn between player one and two
 function switchTurn(){
+    
     if(checkWinner("X")){
-        alert("Win! Player One")
+        alert("Win! Player One");
+        
     }else if(checkWinner("O")){
-        alert("Win! Player Two")  
+        alert("Win! Player Two"); 
+
+    }else if(checkGameTie()){
+        setMessage("Game Tie");
+
     }else if(turn == "X"){
         turn = "O";
         setMessage("Player Two");
@@ -40,6 +54,7 @@ function switchTurn(){
         turn = "X";
         setMessage("Player One");
     }
+    
     
 }
 
@@ -71,7 +86,14 @@ function checkWinner(turn){
     return result;
 }
 
-
+function checkGameTie(){
+    for(var i = 1; i <= 9; i++){
+        if(giveMeSpot(i) == ""){
+            return false;
+        }
+    }
+    return true;
+}
 
 // Create event for button when i clicked return me to page menu
 
@@ -106,18 +128,10 @@ $('#color').on('change', function(){
 
 //create function for text color change
 
-$('#color-text #color-black').on('change', function(){
-    $('body').css('color', 'black');
-    $('#menu').css('color', 'black');
-    $('#restart').css('color', 'black');
-    $('.styleButton').css('color', 'black');
-});
-
-$('#color-text #color-white').on('change', function(){
-    $('body').css('color', 'white');
-    $('#menu').css('color', 'white');
-    $('#restart').css('color', 'white');
-    $('.styleButton').css('color', 'white');
+$('#colorText').on('change', function(){
+    $('#body-game').css('color', $('#colorText').val())
+    $('#menu').css('color', $('#colorText').val())
+    $('#restart').css('color', $('#colorText').val())
+    $('.styleButton').css('color', $('#colorText').val())
 })
-
 
