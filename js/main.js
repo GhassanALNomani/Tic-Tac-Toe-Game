@@ -14,9 +14,8 @@ function setMessage(msg){
 }
 
 var turn = "X";
-var gameTie = null;
-var xWins = 0;
-var oWins = 0;
+
+
 
 // $(".counterX").on('change', ()=>{
 //     xWins++;
@@ -44,7 +43,7 @@ function switchTurn(){
     }else if(checkWinner("O")){
         alert("Win! Player Two"); 
 
-    }else if(checkGameTie()){
+    }else if(gameTie()){
         setMessage("Game Tie");
 
     }else if(turn == "X"){
@@ -57,6 +56,7 @@ function switchTurn(){
     
     
 }
+
 
 //create funtion to give me spot
 
@@ -86,7 +86,7 @@ function checkWinner(turn){
     return result;
 }
 
-function checkGameTie(){
+function gameTie(){
     for(var i = 1; i <= 9; i++){
         if(giveMeSpot(i) == ""){
             return false;
@@ -135,3 +135,7 @@ $('#colorText').on('change', function(){
     $('.styleButton').css('color', $('#colorText').val())
 })
 
+
+$('.card').on('click', function(){
+    $('.card').toggleClass('is-flipped');
+})

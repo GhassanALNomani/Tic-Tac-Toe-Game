@@ -177,4 +177,46 @@
 }
 /*   End style game.html page ===================
 =================================================*/
+#background{
+    background-image: url('https://image.freepik.com/free-vector/tic-tac-toe-game_97886-854.jpg');
+    background-repeat: no-repeat;
+}
 
+.scene {
+
+    perspective: 600px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--front {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .card__face--back {
+    font-size: 20px;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
