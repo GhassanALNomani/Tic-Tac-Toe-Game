@@ -7,6 +7,9 @@ $('#butGame').on('click', () =>{
 
 
 
+$('.card').on('click', function(){
+    $('.card').toggleClass('is-flipped');
+})
 
 
 function setMessage(msg){
@@ -136,6 +139,3 @@ $('#colorText').on('change', function(){
 })
 
 
-$('.card').on('click', function(){
-    $('.card').toggleClass('is-flipped');
-})
