@@ -26,3 +26,6 @@ URL:
 - Html
 - Css 
 - JavaScript & JQuery
+
+### Wireframe:
+![alt text](img/game.png)
