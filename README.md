@@ -42,3 +42,4 @@ URL:  https://pages.git.generalassemb.ly/ghassansaud/project-1/
 - multiple game rounds with a win counter.
 - let Player choose X or O
 - Upgrade Custome game with some idea.
+- Add audio to the game.
