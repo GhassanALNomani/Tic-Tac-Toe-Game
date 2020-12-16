@@ -36,4 +36,4 @@ URL:  https://pages.git.generalassemb.ly/ghassansaud/project-1/
 
 ### Wireframe:
 
-![alt text](img/game.png)
+![alt text](img/pic1.png)
