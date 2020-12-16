@@ -37,3 +37,8 @@ URL:  https://pages.git.generalassemb.ly/ghassansaud/project-1/
 ### Wireframe:
 
 ![alt text](img/pic1.png)
+
+### Features in future:
+- multiple game rounds with a win counter.
+- let Player choose X or O
+- Upgrade Custome game with some idea.
